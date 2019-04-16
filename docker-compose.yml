@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: nexus.devops.ifrn.edu.br/{{ repository|lower }}:latest
+    ports:
+      - "{{ port }}:80"
+    restart: always
+    environment:
+      - PORT=${PORT:-80}
